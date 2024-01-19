@@ -1,9 +1,13 @@
 {
   "name": "react-each-of",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GiannisGialamas/react-each-of.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "type": "module",
   "main": "./dist/index.umd.js",
