@@ -1,6 +1,10 @@
 {
   "name": "react-each-of",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiannisGialamas/react-each-of.git"
+  },
   "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
