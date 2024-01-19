@@ -1,0 +1,29 @@
+name: CI
+
+on: [push]
+
+jobs:
+  node:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14, 16, 18, 20, 21]
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: 📦 Setup Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: 📦 Install NPM Dependencies
+        run: npm install
+
+      - name: 🚦 Run Eslint
+        run: npm run lint
+
+      - name: ⚡ Run Vitest
+        run: npm run test
